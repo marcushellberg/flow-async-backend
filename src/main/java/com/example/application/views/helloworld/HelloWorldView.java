@@ -32,15 +32,18 @@ public class HelloWorldView extends HorizontalLayout {
   private void save() {
     var name = nameField.getValue();
     service.save(name);
+    showNotification(name);
+    nameField.clear();
+  }
 
+  private void showNotification(String name) {
     System.out.println("Saved: " + name);
 
     var notification = new Notification("Saved: " + name);
     notification.setPosition(Position.MIDDLE);
+    notification.setDuration(3000);
     notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
     notification.open();
-
-    nameField.clear();
   }
 
 }
