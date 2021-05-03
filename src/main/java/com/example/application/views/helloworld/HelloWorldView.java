@@ -16,7 +16,7 @@ import com.vaadin.flow.router.Route;
 public class HelloWorldView extends HorizontalLayout {
 
   private TextField nameField = new TextField("Your name");
-  private Button button = new Button("Say hello");
+  private Button button = new Button("Say hello", e -> save());
   private BackendService service;
 
   public HelloWorldView(BackendService service) {
@@ -25,8 +25,6 @@ public class HelloWorldView extends HorizontalLayout {
 
     add(nameField, button);
     setAlignItems(Alignment.BASELINE);
-
-    button.addClickListener(e -> save());
   }
 
   private void save() {
