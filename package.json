@@ -107,7 +107,8 @@
       "@vaadin/vaadin-lumo-styles": "1.6.0",
       "@vaadin/vaadin-material-styles": "1.3.2",
       "@vaadin/vaadin-rich-text-editor": "1.3.0",
-      "@vaadin/vaadin-avatar": "1.0.4"
+      "@vaadin/vaadin-avatar": "1.0.4",
+      "pdf-viewer-element": "0.1.0-pre.4"
     },
     "devDependencies": {
       "webpack-babel-multi-target-plugin": "2.3.3",
