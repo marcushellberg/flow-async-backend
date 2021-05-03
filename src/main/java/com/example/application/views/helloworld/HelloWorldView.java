@@ -14,10 +14,10 @@ import com.vaadin.flow.router.Route;
 @Route(value = "", layout = MainView.class)
 @CssImport("./views/helloworld/hello-world-view.css")
 public class HelloWorldView extends HorizontalLayout {
+  private BackendService service;
 
   private TextField nameField = new TextField("Your name");
   private Button button = new Button("Say hello", e -> save());
-  private BackendService service;
 
   public HelloWorldView(BackendService service) {
     this.service = service;
