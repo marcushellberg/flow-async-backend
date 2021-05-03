@@ -37,8 +37,6 @@ public class HelloWorldView extends HorizontalLayout {
   }
 
   private void showNotification(String name) {
-    System.out.println("Saved: " + name);
-
     var notification = new Notification("Saved: " + name);
     notification.setPosition(Position.MIDDLE);
     notification.setDuration(3000);
