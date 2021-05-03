@@ -9,28 +9,24 @@ import com.vaadin.flow.component.notification.Notification.Position;
 import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.RouteAlias;
 
-@Route(value = "hello", layout = MainView.class)
-@RouteAlias(value = "", layout = MainView.class)
-@PageTitle("Hello World")
+@Route(value = "", layout = MainView.class)
 @CssImport("./views/helloworld/hello-world-view.css")
 public class HelloWorldView extends HorizontalLayout {
 
   private TextField nameField = new TextField("Your name");
-  private Button sayHello = new Button("Say hello");
+  private Button button = new Button("Say hello");
   private BackendService service;
 
   public HelloWorldView(BackendService service) {
     this.service = service;
     addClassName("hello-world-view");
 
-    add(nameField, sayHello);
+    add(nameField, button);
     setAlignItems(Alignment.BASELINE);
 
-    sayHello.addClickListener(e -> save());
+    button.addClickListener(e -> save());
   }
 
   private void save() {
