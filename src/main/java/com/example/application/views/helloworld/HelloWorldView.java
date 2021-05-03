@@ -28,7 +28,7 @@ public class HelloWorldView extends HorizontalLayout {
     addClassName("hello-world-view");
 
     add(nameField, sayHello);
-    setVerticalComponentAlignment(Alignment.END, nameField, sayHello);
+    setAlignItems(Alignment.BASELINE);
 
     sayHello.addClickListener(e -> save());
   }
